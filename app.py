@@ -8,6 +8,12 @@ from io import BytesIO
 
 api_key = os.getenv("ROBOWFLOW_API_KEY")
 
+if api_key:
+    print("API key loaded successfully!")  # Do NOT print the actual key
+else:
+    print("API key not found!")
+
+
 # Connect to local Roboflow Inference Server
 client = InferenceHTTPClient(
     api_url="https://detect.roboflow.com",  
