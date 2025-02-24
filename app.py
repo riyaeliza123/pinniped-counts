@@ -81,19 +81,4 @@ if uploaded_files:
         st.download_button("📥 Download Excel Results", f, file_name="pinniped_counts.xlsx", mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 
 
-# # DEBUGGING API REQUEST ISSUE
-# from inference_sdk import InferenceHTTPClient
 
-# client = InferenceHTTPClient(
-#     api_url="http://localhost:9001",
-#     api_key="M3JrGmzqiCkeQlz3CFYJ"
-# )
-
-# result = client.run_workflow(
-#     workspace_name="pinniped-detection",
-#     workflow_id="detect-count-and-visualize-pinniped",
-#     images={
-#         "image": "images\IMAG0024.JPG"
-#     },
-#     use_cache=True # cache workflow definition for 15 minutes
-# )
