@@ -10,7 +10,7 @@ api_key = os.getenv("ROBOWFLOW_API_KEY")
 
 # Connect to local Roboflow Inference Server
 client = InferenceHTTPClient(
-    api_url="http://localhost:9001",  # Running on local machine (roboflow)
+    api_url="https://detect.roboflow.com",  
     api_key=api_key  
 )
 
