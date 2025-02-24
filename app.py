@@ -10,8 +10,8 @@ api_key = os.getenv("ROBOWFLOW_API_KEY")
 
 # Connect to local Roboflow Inference Server
 client = InferenceHTTPClient(
-    api_url="http://localhost:9001",  # Running on local machine
-    api_key=api_key  # Replace with your actual API key
+    api_url="http://localhost:9001",  # Running on local machine (roboflow)
+    api_key=api_key  
 )
 
 # Directory for saving processed images
