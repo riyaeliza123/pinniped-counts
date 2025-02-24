@@ -3,3 +3,4 @@ inference-sdk
 streamlit
 pandas
 Pillow
+openpyxl
