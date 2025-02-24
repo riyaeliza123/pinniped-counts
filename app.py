@@ -23,10 +23,18 @@ def resize_image(image):
         return cv2.resize(image, new_size, interpolation=cv2.INTER_AREA)
     return image
 
+api_key = st.secrets["ROBOWFLOW_API_KEY"]
+
+if api_key:
+    print("API key loaded successfully!")
+else:
+    print("API key not found!")
+
+
 # Initialize Roboflow client
 CLIENT = InferenceHTTPClient(
     api_url="https://detect.roboflow.com",
-    api_key="M3JrGmzqiCkeQlz3CFYJ"
+    api_key=api_key
 )
 
 # Streamlit UI
