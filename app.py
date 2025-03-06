@@ -47,7 +47,7 @@ uploaded_files = st.file_uploader("Upload images", type=["jpg", "jpeg", "png"], 
 # List to store results
 results_data = []
 
-if uploaded_files:
+if uploaded_files and site and date:
     for uploaded_file in uploaded_files:
         # Load image
         image = Image.open(uploaded_file)
@@ -81,7 +81,7 @@ if uploaded_files:
         st.image(processed_image, caption=f"Processed: {uploaded_file.name} (Detected: {object_count})", use_column_width=True)
 
         # Store results
-        results_data.append({"Image Name": uploaded_file.name, "Object Count": object_count})
+        results_data.append({"Date": date, "Site": site,"Image Name": uploaded_file.name, "Object Count": object_count})
 
         # Remove temp files
         os.remove(temp_filename)
