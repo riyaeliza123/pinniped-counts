@@ -40,6 +40,8 @@ CLIENT = InferenceHTTPClient(
 # Streamlit UI
 st.title("🔍 Pinniped Detection")
 
+site = st.text_input("Enter Site:")
+date = st.date_input("Select Date:")
 uploaded_files = st.file_uploader("Upload images", type=["jpg", "jpeg", "png"], accept_multiple_files=True)
 
 # List to store results
@@ -86,7 +88,7 @@ if uploaded_files:
 
     # Save results to Excel
     results_df = pd.DataFrame(results_data)
-    excel_filename = "detection_results.xlsx"
+    excel_filename = f"{site}_{date}_pinniped_counts.xlsx"
     results_df.to_excel(excel_filename, index=False)
 
     # Provide download link for results
