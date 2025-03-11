@@ -78,7 +78,7 @@ if uploaded_files and site and date:
 
         # Convert image back for Streamlit display
         processed_image = Image.fromarray(image)
-        st.image(processed_image, caption=f"Processed: {uploaded_file.name} (Detected: {object_count})", use_column_width=True)
+        st.image(processed_image, caption=f"Processed: {uploaded_file.name} (Detected: {object_count})", use_container_width=True)
 
         # Store results
         results_data.append({"Date": date, "Site": site,"Image Name": uploaded_file.name, "Object Count": object_count})
