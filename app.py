@@ -59,7 +59,7 @@ if uploaded_files and site and date:
         cv2.imwrite(temp_filename, image, [cv2.IMWRITE_JPEG_QUALITY, 80])
 
         # Run inference
-        result = CLIENT.infer(temp_filename, model_id="pinniped-detection/3")
+        result = CLIENT.infer(temp_filename, model_id="pinniped-detection/5")
         predictions = result.get("predictions", [])
 
         # Count objects detected
