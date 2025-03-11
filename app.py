@@ -61,8 +61,10 @@ if uploaded_files and site and date:
         # Run inference
         result = CLIENT.infer(temp_filename, model_id="pinniped-detection/5")
         predictions = result.get("predictions", [])
-
-        # Count objects detected
+        #st.write(predictions)
+        
+        # Count pinnipeds detected
+        object_count = sum(1 for pred in predictions if pred["class"] == "pinniped")
         object_count = len(predictions)
 
         # Draw bounding boxes
