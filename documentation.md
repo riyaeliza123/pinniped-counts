@@ -11,7 +11,7 @@ The objective of this project was to develop a computer vision model capable of 
 
 ## Methods and Tools
 1. Annotation Tool: Roboflow was used for manual annotation of the images.
-2. Model Architecture: YOLOv11 (You Only Look Once) was selected for its speed and accuracy in object detection tasks.
+2. Model Architecture: YOLOv11 (You Only Look Once) was selected for its speed and accuracy in object detection tasks. YOLOv11 (You Only Look Once version 11) is a state-of-the-art object detection algorithm designed for speed, accuracy, and real-time applications. It is an evolution of the YOLO (You Only Look Once) family of models, which are known for their efficiency in detecting objects in images in a single forward pass through a neural network.
 3. Training: The model was trained using Roboflow’s integrated training pipeline, benefiting from its augmentation and dataset management features.
 
  ## Evaluation Metrics:
@@ -37,3 +37,9 @@ Overfitting Avoidance: Use of data augmentation (e.g., rotations, grayscale) inc
 
 ## Notes
 With further data and refinement, this pipeline can be extended to other marine wildlife monitoring tasks or integrated into broader ecological studies.
+
+## Why was YOLOv11 chosen?
+1. Speed: Processing large batches of images quickly is critical when deploying through a web app like Streamlit. YOLOv11 strikes the perfect balance between speed and performance.
+2. Accuracy: With a mAP@50 of 73.5%, the model provides a reliable detection framework, especially considering the small dataset size.
+3. Robustness: It performed well on varied environmental images, including complex backgrounds and low-contrast subjects.
+4. Ease of Use with Roboflow: Roboflow’s platform offers direct integration and training support for YOLOv11, simplifying the pipeline.
